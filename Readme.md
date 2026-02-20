@@ -1,9 +1,27 @@
 # Clin-Sync Technical Interview
 ## Mini Dental CRM API
 
+### Overview
+
 Build a small REST API for a multi-tenant dental CRM.
 
 You may use either **CodeIgniter 4** or **Laravel** (CI4 is preferred, but either is fine).
+
+There should be multiple dental practices using the system.  Each practice has:
+
+- Dentists/Users
+- Patients
+- Appointments
+
+Practices must not see each other's data.  Patients and appointments should be associated with a practice.
+
+There should be the following API endpoints:
+
+- POST /api/login - authenticate a user and return a token
+- GET /api/patients - list all patients for the practice
+- POST /api/patients - create a new patient
+- GET /api/appointments - list all appointments for the practice
+- POST /api/appointments - create a new appointment
 
 ---
 
