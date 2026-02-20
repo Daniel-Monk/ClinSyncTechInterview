@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  codeigniter:
+    build: .
+    container_name: dental_app_codeigniter
+    ports:
+      - "8080:80"
+    volumes:
+      - ./CodeIgnitor:/var/www/html
+    depends_on:
+      - db
+
+  laravel:
+    build: .
+    container_name: dental_app_laravel
+    ports:
+      - "8081:80"
+    volumes:
+      - ./Laravel:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: dental_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: dental_crm
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: dental
+      MYSQL_PASSWORD: dental
+    ports:
+      - "3307:3306"
+
