@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class UserModel extends Model
@@ -9,6 +11,5 @@ class UserModel extends Model
     protected $allowedFields = ['practice_id', 'name', 'email', 'password'];
     protected $useTimestamps = true;
     protected $updatedField   = '';
-
     protected $hidden = ['password'];
 }
