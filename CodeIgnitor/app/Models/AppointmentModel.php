@@ -8,4 +8,5 @@ class AppointmentModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['practice_id', 'patient_id', 'user_id', 'appointment_at', 'notes'];
     protected $useTimestamps = true;
+    protected $updatedField   = '';
 }

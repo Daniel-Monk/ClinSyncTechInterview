@@ -8,5 +8,7 @@ class UserModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['practice_id', 'name', 'email', 'password'];
     protected $useTimestamps = true;
+    protected $updatedField   = '';
+
     protected $hidden = ['password'];
 }

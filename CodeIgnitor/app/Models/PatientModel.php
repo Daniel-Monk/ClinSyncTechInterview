@@ -8,4 +8,6 @@ class PatientModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['practice_id', 'name', 'email', 'phone', 'date_of_birth'];
     protected $useTimestamps = true;
+    protected $updatedField   = '';
+
 }

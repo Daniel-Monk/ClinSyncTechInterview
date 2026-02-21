@@ -8,4 +8,6 @@ class TokenModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['user_id', 'practice_id', 'token', 'expires_at', 'revoked_at'];
     protected $useTimestamps = true;
+    protected $updatedField   = '';
+
 }

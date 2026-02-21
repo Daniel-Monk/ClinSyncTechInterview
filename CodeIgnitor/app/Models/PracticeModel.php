@@ -8,4 +8,6 @@ class PracticeModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['name'];
     protected $useTimestamps = true;
+    protected $updatedField   = '';
+
 }
