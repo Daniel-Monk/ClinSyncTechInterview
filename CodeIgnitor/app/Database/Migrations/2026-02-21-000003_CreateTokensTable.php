@@ -12,7 +12,7 @@ class CreateTokensTable extends Migration
             'user_id'       => ['type' => 'INT'],
             'practice_id'   => ['type' => 'INT'],
             'token'         => ['type' => 'VARCHAR', 'constraint' => 64],
-            'expires_at'    => ['type' => 'DATETIME', 'null' => true],
+            'expires_at'    => ['type' => 'DATETIME'],
             'revoked_at'    => ['type' => 'DATETIME', 'null' => true],
             'created_at'    => ['type' => 'DATETIME', 'null' => true],
         ]);
