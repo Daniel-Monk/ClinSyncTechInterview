@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Database\Seeds;
+
 use CodeIgniter\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -40,7 +41,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'practice_id'   => 1,
-                'name'          => 'jane Doe',
+                'name'          => 'Jane Doe',
                 'email'         => 'jane@example.com',
                 'phone'         => '077241728593',
                 'date_of_birth' => '1995-11-05',
