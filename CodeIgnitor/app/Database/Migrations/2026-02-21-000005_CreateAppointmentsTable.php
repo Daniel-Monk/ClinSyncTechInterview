@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Database\Migrations;
+
 use CodeIgniter\Database\Migration;
 
 class CreateAppointmentsTable extends Migration
@@ -8,13 +9,13 @@ class CreateAppointmentsTable extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id'            => ['type' => 'INT', 'auto_increment' => true],
-            'practice_id'   => ['type' => 'INT'],
-            'patient_id'    => ['type' => 'INT'],
-            'user_id'       => ['type' => 'INT'],
-            'notes'         => ['type' => 'TEXT', 'null' => true],
-            'appointment_at'=> ['type' => 'DATETIME'],
-            'created_at'    => ['type' => 'DATETIME', 'null' => true],
+            'id'             => ['type' => 'INT', 'auto_increment' => true],
+            'practice_id'    => ['type' => 'INT'],
+            'patient_id'     => ['type' => 'INT'],
+            'user_id'        => ['type' => 'INT'],
+            'notes'          => ['type' => 'TEXT', 'null' => true],
+            'appointment_at' => ['type' => 'DATETIME'],
+            'created_at'     => ['type' => 'DATETIME', 'null' => true],
         ]);
         $this->forge->addPrimaryKey('id');
         $this->forge->addForeignKey('practice_id', 'practices', 'id');
