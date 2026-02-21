@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Database\Migrations;
+
 use CodeIgniter\Database\Migration;
 
 class CreatePatientsTable extends Migration
