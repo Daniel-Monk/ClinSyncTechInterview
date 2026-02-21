@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 class TokenModel extends Model
 {
     protected $table = 'tokens';
-    protected $primary_key = 'id';
+    protected $primaryKey = 'id';
     protected $allowedFields = ['user_id', 'practice_id', 'token', 'expires_at', 'revoked_at'];
     protected $useTimestamps = true;
 }

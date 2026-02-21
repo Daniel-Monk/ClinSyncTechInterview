@@ -5,8 +5,8 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $table = 'users';
-    protected $primary_key = 'id';
+    protected $primaryKey = 'id';
     protected $allowedFields = ['practice_id', 'name', 'email', 'password'];
-    protected $useTimesetamps = true;
+    protected $useTimestamps = true;
     protected $hidden = ['password'];
 }
