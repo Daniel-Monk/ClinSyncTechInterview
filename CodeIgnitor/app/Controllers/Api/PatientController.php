@@ -4,16 +4,24 @@ namespace App\Controllers\Api;
 
 use App\Controllers\BaseController;
 use App\Models\PatientModel;
+use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\HTTP\ResponseInterface;
+use Psr\Log\LoggerInterface;
 
 class PatientController extends BaseController
 {
     protected $practiceId;
 
-    public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
-    {
+    public function initController(
+        RequestInterface $request,
+        ResponseInterface $response,
+        LoggerInterface $logger,
+    ) {
         parent::initController($request, $response, $logger);
         $this->practiceId = session()->get('practice_id');
     }
+
+
 
     public function index()
     {
