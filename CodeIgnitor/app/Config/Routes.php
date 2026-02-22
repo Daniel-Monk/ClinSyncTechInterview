@@ -13,3 +13,7 @@ $routes->group('api', static function ($routes) {
     $routes->get('health', 'Api\Health::index');
 });
 
+$routes->group('api', ['filter' => 'auth'], static function ($routes) {
+    $routes->get('patients', 'Api\PatientController::index');
+    $routes->post('patients', 'Api\PatientController::create');
+});
