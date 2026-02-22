@@ -34,7 +34,7 @@ class AppointmentController extends BaseController
             ->setJSON($appointments);
     }
 
-   public function create()
+    public function create()
     {
         $json = $this->request->getJSON();
 
